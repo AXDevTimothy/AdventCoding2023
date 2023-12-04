@@ -35,8 +35,7 @@ public class Day4Part2
             {              
                 if (winningNums.Contains(value) && value != " " && value != "")
                 {          
-                    copyLevel += 1;
-                    
+                    copyLevel += 1;                    
                     copies[copyLevel] = copies[copyLevel] + 1;
                     sumValue += 1;                    
                 }                
@@ -52,7 +51,6 @@ public class Day4Part2
                     if (winningNums.Contains(value) && value != " " && value != "")
                     {                        
                         copyLevel += 1;
-
                         copies[copyLevel] = copies[copyLevel] + 1;
                         sumValue += 1;                        
                     }
