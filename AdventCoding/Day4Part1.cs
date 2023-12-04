@@ -11,20 +11,8 @@ public class Day4Part1
         //Populate PartList
         while (streamReader.ReadLine() is { } fileLine)
         {
-            //Real
             winningNums = new List<String>(Regex.Replace(fileLine.Substring(10, 29), @"\s+", " ").Split(' '));
             elfNums = new List<String>(Regex.Replace(fileLine.Substring(42, 74), @"\s+", " ").Split(' '));
-
-            //winningNums = new List<String>(fileLine.Substring(9, fileLine.Length - 9).Split('|')[0].Split(' '));
-            //elfNums = new List<String>(fileLine.Substring(9, fileLine.Length - 9).Split('|')[1].Split(' '));
-
-
-            
-            //Console.WriteLine(fileLine);
-            //Console.WriteLine(fileLine.Substring(9, fileLine.Length - 9).Split('|')[0]);
-            //Console.WriteLine(fileLine.Substring(9, fileLine.Length - 9).Split('|')[1]);
-                
-
 
             points = 0;
 
@@ -35,7 +23,6 @@ public class Day4Part1
                     points = points == 0 ? 1 : points * 2;    
                 }                
             }
-            //Console.WriteLine(points);
 
             sumValue += points;
         }       

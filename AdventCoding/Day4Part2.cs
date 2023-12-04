@@ -24,19 +24,8 @@ public class Day4Part2
         {
             row++;
 
-            //Real
-            //winningNums = new List<String>(Regex.Replace(cardList[x].Substring(10, 29), @"\s+", " ").Split(' '));
-            //elfNums = new List<String>(Regex.Replace(cardList[x].Substring(42, 74), @"\s+", " ").Split(' '));
-
             winningNums = new List<String>(cardList[x].Substring(9, cardList[x].Length - 9).Split('|')[0].Split(' '));
             elfNums = new List<String>(cardList[x].Substring(9, cardList[x].Length - 9).Split('|')[1].Split(' '));
-
-
-
-            //Console.WriteLine(fileLine);
-            //Console.WriteLine(fileLine.Substring(9, fileLine.Length - 9).Split('|')[0]);
-            //Console.WriteLine(fileLine.Substring(9, fileLine.Length - 9).Split('|')[1]);
-
 
             copyLevel = row;
             sumValue += 1;
@@ -47,12 +36,9 @@ public class Day4Part2
                 if (winningNums.Contains(value) && value != " " && value != "")
                 {          
                     copyLevel += 1;
-
-                    //if (copyLevel < maxRow)
-                    //{
-                        copies[copyLevel] = copies[copyLevel] + 1;
-                        sumValue += 1;
-                    //}
+                    
+                    copies[copyLevel] = copies[copyLevel] + 1;
+                    sumValue += 1;                    
                 }                
             }
 
@@ -67,11 +53,8 @@ public class Day4Part2
                     {                        
                         copyLevel += 1;
 
-                        //if (copyLevel < maxRow)
-                        //{
-                            copies[copyLevel] = copies[copyLevel] + 1;
-                            sumValue += 1;
-                        //}
+                        copies[copyLevel] = copies[copyLevel] + 1;
+                        sumValue += 1;                        
                     }
                 }
             }   
