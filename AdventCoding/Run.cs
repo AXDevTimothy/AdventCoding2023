@@ -1,1 +1,1 @@
-﻿Day6Part2.Main();
+﻿Day8Part1.Main();
